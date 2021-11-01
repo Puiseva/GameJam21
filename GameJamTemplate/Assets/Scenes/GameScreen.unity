@@ -417,6 +417,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175508795}
   m_CullTransparentMesh: 1
+--- !u!1 &179937084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179937085}
+  - component: {fileID: 179937086}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179937085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179937084}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1, y: -0.03, z: 0.57}
+  m_LocalScale: {x: 1.6664166, y: 1.6664166, z: 1.6664166}
+  m_Children: []
+  m_Father: {fileID: 1438694147}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179937086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179937084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc49f76be923ebd40bc06117ecd95657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAmmo: {fileID: 8937311025925902583, guid: 9df672c47fcacb34694cbced34d23d48, type: 3}
+  myDoughnut: {fileID: 0}
+  myMelee: {fileID: 0}
 --- !u!1 &231977437
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +784,6 @@ MonoBehaviour:
   speed: 14.65
   rotateSpeed: 24.06
   myRB: {fileID: 339711436}
-  myAmmo: {fileID: 0}
 --- !u!54 &339711436
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1917,6 +1962,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305598564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1315381534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315381535}
+  - component: {fileID: 1315381536}
+  m_Layer: 0
+  m_Name: Melee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1315381535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315381534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.248236, y: 1.11, z: 3.19}
+  m_LocalScale: {x: 1.6664166, y: 1.6664166, z: 1.6664166}
+  m_Children: []
+  m_Father: {fileID: 1438694147}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1315381536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315381534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc49f76be923ebd40bc06117ecd95657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAmmo: {fileID: 0}
+  myDoughnut: {fileID: 0}
+  myMelee: {fileID: 5336962259073635578, guid: 561066a16cebb2e4a9f989986603df20, type: 3}
 --- !u!1 &1350692425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,7 +2210,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 491.64, y: 146.81, z: -320.50488}
   m_LocalScale: {x: 0.60009, y: 0.60009, z: 0.60009}
-  m_Children: []
+  m_Children:
+  - {fileID: 1712108069}
+  - {fileID: 179937085}
+  - {fileID: 1315381535}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2138,7 +2232,6 @@ MonoBehaviour:
   speed: 9.43
   rotateSpeed: 64.56
   myRB: {fileID: 1438694143}
-  myAmmo: {fileID: 0}
 --- !u!1 &1450008258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2668,52 @@ MonoBehaviour:
   uiPauseButton: {fileID: 175508795}
   uiPauseText: {fileID: 427284625}
   uiResumeButton: {fileID: 1077424268}
+--- !u!1 &1712108068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712108069}
+  - component: {fileID: 1712108070}
+  m_Layer: 0
+  m_Name: Doughnut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1712108069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712108068}
+  m_LocalRotation: {x: -0.5939995, y: -0, z: -0, w: 0.8044654}
+  m_LocalPosition: {x: -0.12, y: 1.21, z: 0.07}
+  m_LocalScale: {x: 1.6664166, y: 1.6664166, z: 1.6664166}
+  m_Children: []
+  m_Father: {fileID: 1438694147}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -72.883, y: 0, z: 0}
+--- !u!114 &1712108070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712108068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc49f76be923ebd40bc06117ecd95657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAmmo: {fileID: 0}
+  myDoughnut: {fileID: 7169476075040086532, guid: b4f53e849a11bd148a95384545e5e0ee, type: 3}
+  myMelee: {fileID: 0}
 --- !u!1 &1807531403
 GameObject:
   m_ObjectHideFlags: 0

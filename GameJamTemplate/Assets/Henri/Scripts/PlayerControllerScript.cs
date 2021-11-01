@@ -10,8 +10,6 @@ public class PlayerControllerScript : MonoBehaviour
 
     public Rigidbody myRB;
 
-    public GameObject myAmmo;
-
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +20,7 @@ public class PlayerControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //VAIHTOEHTOINEN KOODI LIIKKEELLE
+
         //ETEEN & TAAKSE LIIKE
         float ver = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * ver * speed * Time.deltaTime);
@@ -46,6 +44,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        //VAIHTOEHTOINEN KOODI LIIKKEELLE
         //PELAAJAN LIIKE
         //float hor = Input.GetAxis("Horizontal");
         //float ver = Input.GetAxis("Vertical");
