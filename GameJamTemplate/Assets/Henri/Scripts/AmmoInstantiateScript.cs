@@ -20,7 +20,9 @@ public class AmmoInstantiateScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            Instantiate(myAmmo, transform.position, transform.rotation);
+            GameObject bullet;
+            bullet = Instantiate(myAmmo, transform.position, transform.rotation);
+            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 1000f);
         }
 
         if(Input.GetButtonDown("Fire1"))

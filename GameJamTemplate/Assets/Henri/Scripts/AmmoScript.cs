@@ -8,9 +8,8 @@ public class AmmoScript : MonoBehaviour
     void Start()
     {
 
-         GetComponent<Rigidbody>().AddForce(Vector3.forward * 600f);
          Destroy(gameObject, 1f);
- 
+        //tagin avulla tuhoaa luodin "wall"
     }
 
     // Update is called once per frame

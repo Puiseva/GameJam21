@@ -23,11 +23,11 @@ public class PlayerControllerScript : MonoBehaviour
 
         //ETEEN & TAAKSE LIIKE
         float ver = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * ver * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * ver * speed * Time.deltaTime,Space.World);
 
         //VASEN & OIKEA LIIKE
         float hor = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * hor * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * hor * speed * Time.deltaTime,Space.World);
 
         //PELAAJAN ROTAATIO
         if (Input.GetKey(KeyCode.A))
