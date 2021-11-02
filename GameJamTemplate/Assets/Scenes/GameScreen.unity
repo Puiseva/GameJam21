@@ -201,9 +201,9 @@ GameObject:
   - component: {fileID: 54746052}
   - component: {fileID: 54746051}
   - component: {fileID: 54746050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,9 +524,9 @@ GameObject:
   - component: {fileID: 318090029}
   - component: {fileID: 318090028}
   - component: {fileID: 318090027}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pillar (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,9 +619,9 @@ GameObject:
   - component: {fileID: 338452734}
   - component: {fileID: 338452733}
   - component: {fileID: 338452732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -881,9 +881,9 @@ GameObject:
   - component: {fileID: 501207372}
   - component: {fileID: 501207371}
   - component: {fileID: 501207370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,9 +976,9 @@ GameObject:
   - component: {fileID: 590465755}
   - component: {fileID: 590465754}
   - component: {fileID: 590465753}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pillar (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,9 +1071,9 @@ GameObject:
   - component: {fileID: 634321462}
   - component: {fileID: 634321461}
   - component: {fileID: 634321460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1705,9 +1705,9 @@ GameObject:
   - component: {fileID: 1305598568}
   - component: {fileID: 1305598567}
   - component: {fileID: 1305598566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1893,9 +1893,9 @@ GameObject:
   - component: {fileID: 1450008262}
   - component: {fileID: 1450008261}
   - component: {fileID: 1450008260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1988,9 +1988,9 @@ GameObject:
   - component: {fileID: 1478706630}
   - component: {fileID: 1478706629}
   - component: {fileID: 1478706628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pillar
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2363,9 +2363,9 @@ GameObject:
   - component: {fileID: 1905206953}
   - component: {fileID: 1905206952}
   - component: {fileID: 1905206951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pillar (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2494,9 +2494,9 @@ GameObject:
   - component: {fileID: 1959077429}
   - component: {fileID: 1959077428}
   - component: {fileID: 1959077427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2589,9 +2589,9 @@ GameObject:
   - component: {fileID: 1960257196}
   - component: {fileID: 1960257195}
   - component: {fileID: 1960257194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall Front
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2684,9 +2684,9 @@ GameObject:
   - component: {fileID: 1992134515}
   - component: {fileID: 1992134514}
   - component: {fileID: 1992134513}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2779,9 +2779,9 @@ GameObject:
   - component: {fileID: 2028344477}
   - component: {fileID: 2028344476}
   - component: {fileID: 2028344475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wallcube1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
