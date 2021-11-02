@@ -702,11 +702,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338452730}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &375417496 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6689510933062434736, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-  m_PrefabInstance: {fileID: 1890772981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &404861038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,11 +2238,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509261845}
   m_CullTransparentMesh: 1
---- !u!1 &1603196703 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6689510933855418007, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-  m_PrefabInstance: {fileID: 1890772981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1621959566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,22 +2415,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 375417497, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-      propertyPath: myDecoy
-      value: 
-      objectReference: {fileID: 1603196703}
-    - target: {fileID: 375417497, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-      propertyPath: myExplosion
-      value: 
-      objectReference: {fileID: 5963967408156324207, guid: 50dbc8abe031587469e30216637dcc49, type: 3}
-    - target: {fileID: 375417497, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-      propertyPath: myGunPowder
-      value: 
-      objectReference: {fileID: 2143337119}
-    - target: {fileID: 6689510932306860942, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.83
-      objectReference: {fileID: 0}
     - target: {fileID: 6689510933062434381, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
       propertyPath: m_Name
       value: Player(Prototype)
@@ -2488,18 +2462,6 @@ PrefabInstance:
     - target: {fileID: 6689510933062434736, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6689510933458363820, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6689510933458363820, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6689510933458363820, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc6aea937a61d340a211b283cd170df, type: 3}
@@ -3097,33 +3059,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -7.728, y: -5.129, z: 25.155}
---- !u!1 &2143337119
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2143337120}
-  m_Layer: 0
-  m_Name: GunPowder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2143337120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143337119}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0.27, z: 1.54}
-  m_LocalScale: {x: 1.6664166, y: 1.6664166, z: 1.6664166}
-  m_Children: []
-  m_Father: {fileID: 375417496}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

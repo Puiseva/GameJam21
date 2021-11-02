@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2143337119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143337120}
+  m_Layer: 0
+  m_Name: GunPowder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2143337120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143337119}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.05, y: 0.27, z: 1.54}
+  m_LocalScale: {x: 1.6664166, y: 1.6664166, z: 1.6664166}
+  m_Children: []
+  m_Father: {fileID: 6689510933062434736}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280718511954433556
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6689510932306860943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -0.03, z: 2.22}
+  m_LocalPosition: {x: -0.1, y: -0.03, z: 1.83}
   m_LocalScale: {x: 1.6664166, y: 1.6664166, z: 1.6664166}
   m_Children: []
   m_Father: {fileID: 6689510933062434736}
@@ -162,6 +192,7 @@ Transform:
   - {fileID: 6689510933855418006}
   - {fileID: 6689510932306860942}
   - {fileID: 6689510933458363820}
+  - {fileID: 2143337120}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -273,8 +304,11 @@ MonoBehaviour:
   myAmmo: {fileID: 8937311025925902583, guid: 9df672c47fcacb34694cbced34d23d48, type: 3}
   myDoughnut: {fileID: 7169476075040086532, guid: b4f53e849a11bd148a95384545e5e0ee, type: 3}
   myMelee: {fileID: 7516915403295899059, guid: 238be61f6e9404440a600159389f158b, type: 3}
+  myExplosion: {fileID: 5963967408156324207, guid: 50dbc8abe031587469e30216637dcc49, type: 3}
   myGun: {fileID: 6689510932306860943}
+  myDecoy: {fileID: 6689510933855418007}
   mySlash: {fileID: 6689510933458363821}
+  myGunPowder: {fileID: 2143337119}
 --- !u!1 &6689510933458363821
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6689510933458363821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.89, y: 3.69, z: 2.38}
+  m_LocalPosition: {x: -0.01, y: 0, z: 1.16}
   m_LocalScale: {x: 1.6664166, y: 1.6664166, z: 1.6664166}
   m_Children: []
   m_Father: {fileID: 6689510933062434736}
