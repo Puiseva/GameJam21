@@ -10,6 +10,8 @@ public class PlayerControllerScript : MonoBehaviour
 
     public Rigidbody myRB;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +32,12 @@ public class PlayerControllerScript : MonoBehaviour
         transform.Translate(Vector3.right * hor * speed * Time.deltaTime,Space.World);
 
         //PELAAJAN ROTAATIO
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(Vector3.down * rotateSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
