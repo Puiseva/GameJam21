@@ -8,6 +8,12 @@ public class AmmoInstantiateScript : MonoBehaviour
     public GameObject myAmmo;
     public GameObject myDoughnut;
     public GameObject myMelee;
+    public GameObject myExplosion;
+
+    public GameObject myGun;
+    public GameObject myDecoy;
+    public GameObject mySlash;
+    public GameObject myGunPowder;
 
     // Start is called before the first frame update
     void Start()
@@ -21,18 +27,25 @@ public class AmmoInstantiateScript : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             GameObject bullet;
-            bullet = Instantiate(myAmmo, transform.position, transform.rotation);
-            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 250f);
+            bullet = Instantiate(myAmmo,myGun.transform.position,myGun.transform.rotation);
+            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
+            Instantiate(myExplosion, myGunPowder.transform.position, myGun.transform.rotation);
+            
         }
 
         if(Input.GetButtonDown("Fire1"))
         {
-            Instantiate(myDoughnut, transform.position, transform.rotation);
+            GameObject doughnut;
+            doughnut = Instantiate(myDoughnut, myDecoy.transform.position, myDecoy.transform.rotation);
+            doughnut.GetComponent<Rigidbody>().AddForce(transform.forward * 600f);
+            Destroy(doughnut, 1f);
         }
 
         if(Input.GetButtonDown("Fire3"))
         {
-            Instantiate(myMelee, transform.position, transform.rotation);
+            GameObject melee;
+            melee = Instantiate(myMelee,mySlash.transform.position,mySlash.transform.rotation);
+            Destroy(melee, 0.5f);
         }
     }
 }

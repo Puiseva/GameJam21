@@ -5,26 +5,29 @@ using UnityEngine;
 public class AmmoScript : MonoBehaviour
 {
 
-    public GameObject myExplosion;
+    public GameObject wallExplosion;
+    public GameObject enemyExplosion;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Wall")
         {
-            Instantiate(myExplosion, transform.position, transform.rotation);
+            Instantiate(wallExplosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            Instantiate(enemyExplosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
 
-        
-
-        //Destroy(gameObject, 1f);
-        //tagin avulla tuhoaa luodin "wall"
     }
 
     // Update is called once per frame

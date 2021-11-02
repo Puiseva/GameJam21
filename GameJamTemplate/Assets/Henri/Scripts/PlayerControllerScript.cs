@@ -31,6 +31,20 @@ public class PlayerControllerScript : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * hor * speed * Time.deltaTime,Space.World);
 
+        /*/
+         //KOKEILU LIIKKUMISELLE
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            transform.Rotate(new Vector3(0f, -90f, 0f));
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.Rotate(new Vector3(0f, 90f, 0f));
+        }
+        */
+        
+        
         //PELAAJAN ROTAATIO
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -41,7 +55,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
             transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
-
+        
     }
 
     void FixedUpdate()
