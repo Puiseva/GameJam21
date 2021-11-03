@@ -7,6 +7,7 @@ public class DoughnutScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        /*/
         if (other.gameObject.tag == "P")
         {
             Instantiate(wallExplosion, transform.position, transform.rotation);
@@ -18,6 +19,7 @@ public class DoughnutScript : MonoBehaviour
             Instantiate(enemyExplosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+        */
     }
 
 
