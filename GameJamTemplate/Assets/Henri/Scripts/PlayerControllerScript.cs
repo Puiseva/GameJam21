@@ -109,7 +109,22 @@ public class PlayerControllerScript : MonoBehaviour
         movement.Normalize();
 
         myRB.velocity = movement * speed;
+
+        if (hor != 0  || ver != 0)
+        {
+            speed += Time.deltaTime * 20;
+            if (speed >= 10f)
+            {
+                speed = 10f;
+            }
+        }
+
+        else if (hor == 0 || ver == 0)
+        {
+            speed = 5f;
+        }
     }
+
 
     //void FixedUpdate()
     //{
