@@ -39,6 +39,8 @@ public class AmmoInstantiateScript : MonoBehaviour
             doughnut = Instantiate(myDoughnut, myDecoy.transform.position, myDecoy.transform.rotation);
             doughnut.GetComponent<Rigidbody>().AddForce(transform.forward * 600f);
             Destroy(doughnut, 1f);
+
+            //testi
         }
 
         if(Input.GetButtonDown("Fire2"))
