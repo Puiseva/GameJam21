@@ -41,11 +41,12 @@ public class AmmoInstantiateScript : MonoBehaviour
             Destroy(doughnut, 1f);
         }
 
-        if(Input.GetButtonDown("Fire3"))
+        if(Input.GetButtonDown("Fire2"))
         {
             GameObject melee;
             melee = Instantiate(myMelee,mySlash.transform.position,mySlash.transform.rotation);
-            Destroy(melee, 0.5f);
+            melee.transform.parent = mySlash.transform;
+            Destroy(melee, 0.3f);
         }
     }
 }

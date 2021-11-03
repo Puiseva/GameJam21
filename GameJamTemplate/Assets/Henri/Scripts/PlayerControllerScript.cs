@@ -22,7 +22,7 @@ public class PlayerControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*/
         //ETEEN & TAAKSE LIIKE
         float ver = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * ver * speed * Time.deltaTime,Space.World);
@@ -30,6 +30,8 @@ public class PlayerControllerScript : MonoBehaviour
         //VASEN & OIKEA LIIKE
         float hor = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * hor * speed * Time.deltaTime,Space.World);
+        */
+
 
         /*/
          //KOKEILU LIIKKUMISELLE
@@ -43,8 +45,48 @@ public class PlayerControllerScript : MonoBehaviour
             transform.Rotate(new Vector3(0f, 90f, 0f));
         }
         */
-        
-        
+
+        //VER JA HOR KATSOMINEN
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.eulerAngles = new Vector3(0, 90, 0);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.eulerAngles = new Vector3(0, -90, 0);
+        }
+
+        //45 ASTE KATSOMINEN
+
+        if (Input.GetKey(KeyCode.UpArrow) && (Input.GetKey(KeyCode.RightArrow)))
+        {
+            transform.eulerAngles = new Vector3(0, 45, 0);
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow) && (Input.GetKey(KeyCode.LeftArrow)))
+        {
+            transform.eulerAngles = new Vector3(0, -45, 0);
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow) && (Input.GetKey(KeyCode.RightArrow)))
+        {
+            transform.eulerAngles = new Vector3(0, 135, 0);
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow) && (Input.GetKey(KeyCode.LeftArrow)))
+        {
+            transform.eulerAngles = new Vector3(0, -135, 0);
+        }
+
+        /*/
         //PELAAJAN ROTAATIO
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -55,15 +97,26 @@ public class PlayerControllerScript : MonoBehaviour
         {
             transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
-        
+        */
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
+        float ver = Input.GetAxisRaw("Vertical");
+        float hor = Input.GetAxisRaw("Horizontal");
+
+        Vector3 movement = new Vector3(hor, 0.0f, ver);
+        movement.Normalize();
+
+        myRB.velocity = movement * speed;
+    }
+
+    //void FixedUpdate()
+    //{
         //VAIHTOEHTOINEN KOODI LIIKKEELLE
         //PELAAJAN LIIKE
         //float hor = Input.GetAxis("Horizontal");
         //float ver = Input.GetAxis("Vertical");
         //myRB.AddForce(new Vector3(hor * speed, 0, ver * speed));
-    }
+    //}
 }
