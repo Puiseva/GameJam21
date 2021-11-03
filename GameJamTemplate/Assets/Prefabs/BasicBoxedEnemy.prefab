@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5928359946469769619}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -111,17 +111,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 4
   turningSpeed: 2
-  turretTurningSpeed: 3
   shootingCooldown: 1.5
   detectRange: 10
   stoppingRange: 3
   switchTargetRange: 2
   switchDistance: 10
   AIDelay: 0.5
-  Turret: {fileID: 0}
+  AIDelayHit: 2
   muzzle: {fileID: 0}
   audioSource: {fileID: 0}
   stringState: 
+  pushForce: 1000
 --- !u!54 &5928359946469769625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,5 +136,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0

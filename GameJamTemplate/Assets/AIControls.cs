@@ -38,7 +38,7 @@ public class AIControls : MonoBehaviour
     private State state;
     private State nextState;
 
-    float pushForce = 300f;
+    public float pushForce = 1000f;
 
     // Start is called before the first frame update
     void Start()
@@ -190,32 +190,36 @@ public class AIControls : MonoBehaviour
       if (state == State.beenhit)
         {
             stringState = "beenhit";
-            Move(0f);
-            Turning(0f);
+          //  Move(0f);
+          //  Turning(0f);
         }
     }
 
     private void Move(float input)
     {
-        Vector3 movement = transform.forward * input * movementSpeed;
-        rb.velocity = movement;
-
+        if (state != State.beenhit)
+        {
+            Vector3 movement = transform.forward * input * movementSpeed;
+            rb.velocity = movement;
+        }
     }
 
     private void Turning(float input)
     {
-
-        Vector3 turning = Vector3.up * input * turningSpeed;
-        rb.angularVelocity = turning;
+        if (state != State.beenhit)
+        {
+            Vector3 turning = Vector3.up * input * turningSpeed;
+            rb.angularVelocity = turning;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy") && (state == State.beenhit))
         {
-            print("osuma!");
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+         //   print("osuma!");
+          //  Destroy(other.gameObject);
+          //  Destroy(gameObject);
            /* // Calculate Angle Between the collision point and the player
             Vector3 dir = other.contacts[0].point - transform.position;
             // We then get the opposite (-Vector3) and normalize it
@@ -284,9 +288,15 @@ public class AIControls : MonoBehaviour
             dir = -dir.normalized;
             // And finally we add force in the direction of dir and multiply it by force. 
             // This will push back the player
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
             GetComponent<Rigidbody>().AddForce(dir * pushForce);
         }
-       // else if ()
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            print("osuma!");
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
         else
         {
             state = State.back;
