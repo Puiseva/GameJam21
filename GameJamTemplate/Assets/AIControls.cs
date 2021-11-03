@@ -7,7 +7,7 @@ public class AIControls : MonoBehaviour
 
     public float movementSpeed;
     public float turningSpeed;
-    public float turretTurningSpeed;
+    //public float turretTurningSpeed;
     public float shootingCooldown;
     public float detectRange;
     public float stoppingRange;
@@ -15,8 +15,9 @@ public class AIControls : MonoBehaviour
     public float switchDistance;
 
     public float AIDelay;
+    public float AIDelayHit;
 
-    public Transform Turret;
+    //public Transform Turret;
     public Transform muzzle;
    // public GameObject projectile;
 
@@ -33,11 +34,11 @@ public class AIControls : MonoBehaviour
 
     private int obstacleMask;
 
-    private enum State { forward, left, right, back, stop };
+    private enum State { forward, left, right, back, stop, beenhit };
     private State state;
     private State nextState;
 
-
+    float pushForce = 300f;
 
     // Start is called before the first frame update
     void Start()
@@ -170,10 +171,10 @@ public class AIControls : MonoBehaviour
         }
 
 
-        Vector3 targetDirection = target - Turret.position;
+        /* Vector3 targetDirection = target - Turret.position;
         targetDirection.y = 0f;
-        Vector3 turningDirection = Vector3.RotateTowards(Turret.forward, targetDirection, turretTurningSpeed * Time.deltaTime, 0f);
-        Turret.rotation = Quaternion.LookRotation(turningDirection);
+       Vector3 turningDirection = Vector3.RotateTowards(Turret.forward, targetDirection, turretTurningSpeed * Time.deltaTime, 0f);
+        Turret.rotation = Quaternion.LookRotation(turningDirection);*/
 
 
 
@@ -182,6 +183,16 @@ public class AIControls : MonoBehaviour
 
 
 
+    }
+
+    private void Update()
+    {
+      if (state == State.beenhit)
+        {
+            stringState = "beenhit";
+            Move(0f);
+            Turning(0f);
+        }
     }
 
     private void Move(float input)
@@ -200,6 +211,22 @@ public class AIControls : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Enemy") && (state == State.beenhit))
+        {
+            print("osuma!");
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+           /* // Calculate Angle Between the collision point and the player
+            Vector3 dir = other.contacts[0].point - transform.position;
+            // We then get the opposite (-Vector3) and normalize it
+            dir = -dir.normalized;
+            // And finally we add force in the direction of dir and multiply it by force. 
+            // This will push back the player
+            GetComponent<Rigidbody>().AddForce(dir * pushForce);*/
+        }
+               
+
+
         if (!other.gameObject.CompareTag("Obstacle") && !other.gameObject.CompareTag("Wall"))
         {
             return;
@@ -238,10 +265,28 @@ public class AIControls : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Obstacle") && !collision.gameObject.CompareTag("Wall"))
+        if (!collision.gameObject.CompareTag("Obstacle") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("PlayerAmmo") && (state != State.beenhit))
         {
             return;
         }
+        else if (collision.gameObject.CompareTag("PlayerAmmo"))
+        {
+            state = State.beenhit;
+            nextState = State.stop;
+            stringState = "beenhit";
+            Move(0f);
+            Turning(0f);
+            AIt = AIDelayHit;
+            print("collisionenter osuma!");
+            // Calculate Angle Between the collision point and the player
+            Vector3 dir = collision.contacts[1].point - transform.position;
+            // We then get the opposite (-Vector3) and normalize it
+            dir = -dir.normalized;
+            // And finally we add force in the direction of dir and multiply it by force. 
+            // This will push back the player
+            GetComponent<Rigidbody>().AddForce(dir * pushForce);
+        }
+       // else if ()
         else
         {
             state = State.back;
