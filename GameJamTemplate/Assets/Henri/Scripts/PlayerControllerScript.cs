@@ -66,22 +66,22 @@ public class PlayerControllerScript : MonoBehaviour
 
         //45 ASTE KATSOMINEN
 
-        if (Input.GetKey(KeyCode.UpArrow) && (Input.GetKey(KeyCode.RightArrow)))
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
         {
             transform.eulerAngles = new Vector3(0, 45, 0);
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) && (Input.GetKey(KeyCode.LeftArrow)))
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
         {
             transform.eulerAngles = new Vector3(0, -45, 0);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && (Input.GetKey(KeyCode.RightArrow)))
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
         {
             transform.eulerAngles = new Vector3(0, 135, 0);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && (Input.GetKey(KeyCode.LeftArrow)))
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
         {
             transform.eulerAngles = new Vector3(0, -135, 0);
         }
@@ -107,6 +107,7 @@ public class PlayerControllerScript : MonoBehaviour
 
         Vector3 movement = new Vector3(hor, 0.0f, ver);
         movement.Normalize();
+
 
         myRB.velocity = movement * speed;
 

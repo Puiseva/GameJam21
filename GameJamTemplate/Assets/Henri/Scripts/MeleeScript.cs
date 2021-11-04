@@ -20,7 +20,7 @@ public class MeleeScript : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             Instantiate(enemyExplosion, transform.position, transform.rotation);
-            Destroy(gameObject);
+
         }
     }
 

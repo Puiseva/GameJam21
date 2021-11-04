@@ -7,6 +7,7 @@ public class AmmoScript : MonoBehaviour
 
     public GameObject wallExplosion;
     public GameObject enemyExplosion;
+    //public GoalScript goalScriptScript;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +21,8 @@ public class AmmoScript : MonoBehaviour
         {
             Instantiate(enemyExplosion, transform.position, transform.rotation);
             Destroy(gameObject);
+            //goalScriptScript.AddScore();
+            //GoalScript.instance.AddScore();
         }
     }
     

@@ -1363,7 +1363,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.38431373, g: 0.5823344, b: 0.58431375, a: 0.9137255}
-        key1: {r: 0.38354397, g: 0.4246027, b: 0.4811321, a: 0.84313726}
+        key1: {r: 0.7924528, g: 0.19063722, b: 0.22800677, a: 0.84313726}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4873,9 +4873,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e1a75776f005439469f89a17a986c567, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4919,7 +4919,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.547
       inSlope: 0
       outSlope: 0
       tangentMode: 0
