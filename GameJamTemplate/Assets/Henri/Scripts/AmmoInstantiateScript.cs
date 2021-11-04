@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AmmoInstantiateScript : MonoBehaviour
 {
+    // Test
 
     public GameObject myAmmo;
     public GameObject myDoughnut;
